@@ -9,6 +9,20 @@ Before you try to test the API, we suggest you add some of these in the package 
 github.com/labstack/echo
 github.com/mattn/go-sqlite3
 ```
+
+Structure in Golang:
+```
+- go
+  |- bin
+  |- pkg
+  |- src
+    |- api-test
+    |- github.com
+        |- labstack
+            |- echo
+        |- mattn
+            |- go-sqlite3
+```
 -------------------------------------------------------------------------
 
 ## API Documentation
