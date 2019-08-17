@@ -19,7 +19,7 @@ func main() {
 	e.PATCH("/users/update-status/:id", services.UpdateStatusUser(db))
 	e.DELETE("/users/delete/:id", services.DeleteUser(db))
 
-	e.Logger.Fatal(e.Start(":3010"))
+	e.Logger.Fatal(e.Start(":9000"))
 }
 
 func initDB(filepath string) *sql.DB {
