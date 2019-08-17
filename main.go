@@ -14,7 +14,7 @@ func main() {
 	migrate(db)
 
 	e.GET("/users", services.GetUser(db))
-	e.POST("/users/insert", services.InsertUser(db))
+	e.POST("/users", services.InsertUser(db))
 	e.PATCH("/users/update-handphone/:id", services.UpdateHandphoneUser(db))
 	e.PATCH("/users/update-status/:id", services.UpdateStatusUser(db))
 	e.DELETE("/users/delete/:id", services.DeleteUser(db))

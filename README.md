@@ -1,5 +1,14 @@
 API User Golang Test
+====================
 
+This repo is simple CRUD User with Golang. In this case, I use *Echo* for web framework.
+
+Before you try to test the API, we suggest you add some of these in the package repository GO
+
+```
+github.com/labstack/echo
+github.com/mattn/go-sqlite3
+```
 -------------------------------------------------------------------------
 
 ## API Documentation
@@ -22,32 +31,49 @@ Content-Type: "application/json"
     "result": [
         {
             "id": 1,
-            "name": "anton",
-            "email": "anton@mail.com",
-            "handphone": "+6281390232808",
+            "name": "example",
+            "email": "example@mail.com",
+            "handphone": "+62123456789",
             "status": 1
         },
-        {
-            "id": 2,
-            "name": "anton",
-            "email": "anton@mail.com",
-            "handphone": "+6213892398294",
-            "status": 1
-        },
-        {
-            "id": 3,
-            "name": "anton",
-            "email": "anton@mail.com",
-            "handphone": "+6281390232808",
-            "status": 1
-        },
-        {
-            "id": 4,
-            "name": "andika",
-            "email": "andika@gmail.com",
-            "handphone": "+6213892398294",
-            "status": 1
-        }
     ]
+}
+```
+
+### POST /users
+
+```
+POST /users
+Content-Type: "application/json"
+
+{
+	"name" : "example",
+	"email" : "example@mail.com",
+	"handphone" : "+6123456789",
+	"status" : 1
+}
+```
+
+Attribute | Description
+--------- | -----------
+name      | user name
+email     | user email
+handphone | handphone user with ext. +62
+status    | status user ex. 0 or 1
+
+##### Returns:
+
+**201** Created
+
+```
+{
+    "message": "success created user",
+    "result": {
+        "id": 0,
+        "name": "example",
+        "email": "example@mail.com",
+        "handphone": "+6123456789",
+        "status": 1
+    }
 }
 ```
